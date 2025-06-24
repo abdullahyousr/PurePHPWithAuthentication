@@ -8,6 +8,8 @@ A simple, modern blog platform built with pure PHP and MySQL, featuring user aut
 - User dashboard with post management (create, edit, delete)
 - Public post listing and single post view
 - Commenting system (authenticated users)
+- **Products section**: Browse products, add to cart, and place orders (basic e-commerce)
+- Shopping cart and order management for authenticated users
 - Responsive, modern UI (custom CSS)
 - MySQL database schema included
 - Session-based authentication
@@ -20,14 +22,14 @@ css/                   # Custom CSS styles
 index.php              # Home page (latest posts)
 viewposts.php          # All posts listing
 view-post.php          # Single post view (with comments)
-dashboard.php          # User dashboard (manage posts, account info)
+dashboard.php          # User dashboard (manage posts, account info, products, cart)
 create-post.php        # Create new post (authenticated)
 edit-post.php          # Edit post (authenticated, owner only)
 delete-post.php        # Delete post (authenticated, owner only)
 login.php              # User login
 register.php           # User registration
 logout.php             # User logout
-mysql.sql              # Database schema
+mysql.sql              # Database schema (includes products, cart, orders)
 ```
 
 ## Setup Instructions
@@ -76,6 +78,23 @@ mysql.sql              # Database schema
 
 ## License
 MIT or specify your own license.
+
+## Products & E-commerce Section
+
+The application now includes a basic e-commerce section:
+
+- **Product Listing:** View available products from the dashboard.
+- **Add to Cart:** Authenticated users can add products to their cart.
+- **Cart Management:** View cart item count, and order all items in the cart.
+- **Order Products:** Place an order for all items in your cart (stock is checked and updated).
+
+**Database:**
+- The schema now includes `products`, `carts`, `cart_items`, `orders`, and `order_items` tables in addition to blog tables.
+
+**UI:**
+- The dashboard displays a products section with add-to-cart and order buttons, and a cart icon with item count.
+
+**Note:** This is a simple e-commerce implementation for learning purposes and does not include payment processing.
 
 ---
 
